@@ -8,14 +8,18 @@
 
 <body>
     <h1><a href="index.html">Mobile Game</a></h1>
-    <input type="button" value="주간" onclick="
+    <input type="button" id="DnN" value="switch-N" onclick="
+        if(document.querySelector('#DnN').value=='switch-N'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#DnN').value='switch-D';
+        }
+        else {
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';
+        document.querySelector('#DnN').value='switch-N';
+        }
     ">
-    <input type="button" value="야간" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-">
     <ol>
         <li><a href="1.html">원신</a></li>
         <li><a href="2.html">AFK아레나</a></li>
