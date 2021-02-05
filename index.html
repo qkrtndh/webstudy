@@ -29,12 +29,24 @@
             padding-left: 30px;
             margin: 0;
         }
-        #grid{
-            display:grid;
+
+        #grid {
+            display: grid;
             grid-template-columns: 200px 1fr;
         }
-        #article{
+
+        #article {
             padding-left: 20px;
+        }
+
+        @media(max-width: 800px) {
+            #grid {
+                display: block;
+            }
+
+            #grid ol {
+                border-right: none;
+            }
         }
     </style>
 </head>
