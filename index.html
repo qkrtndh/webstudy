@@ -4,34 +4,37 @@
 <head>
     <title>web study-Welcome</title>
     <meta charset="utf-8">
+    <script>
+        function changemode(self) {
+            var target = document.querySelector('body');
+            if (self.value == 'switch-N') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'switch-D';
+                var array = document.querySelectorAll('a');
+                var i = 0;
+                for (i = 0; i < array.length; i++) {
+                    array[i].style.color = 'powderblue';
+                }
+            }
+            else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'switch-N';
+                var array = document.querySelectorAll('a');
+                var i = 0;
+                for (i = 0; i < array.length; i++) {
+                    array[i].style.color = 'blue';
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1><a href="index.html">Mobile Game</a></h1>
     <input type="button" id="DnN" value="switch-N" onclick="
-        var target = document.querySelector('body');
-        if(this.value=='switch-N'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value='switch-D';
-        var array = document.querySelectorAll('a');
-        var i=0;
-        for(i=0;i<array.length;i++)
-        {
-            array[i].style.color='powderblue';
-        }
-        }
-        else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value='switch-N';
-        var array = document.querySelectorAll('a');
-        var i=0;
-        for(i=0;i<array.length;i++)
-        {
-            array[i].style.color='blue';
-        }
-        }
+        changemode(this);
     ">
     <ol>
         <li><a href="1.html">원신</a></li>
